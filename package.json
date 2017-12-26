@@ -17,6 +17,7 @@
     "debug": "2.2.0",
     "express": "4.13.3",
     "geoip-lite": "^1.2.1",
+    "public-ip": "^2.4.0",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.1",

@@ -117,7 +117,6 @@ api.on('connection', function (spark)
 		if( !_.isUndefined(data.id) && !_.isUndefined(data.info) )
 		{
 			data.ip = spark.address.ip;
-			console.info("address-ip:"+data.ip);
 			data.spark = spark.id;
 			data.latency = spark.latency || 0;
 
@@ -133,7 +132,7 @@ api.on('connection', function (spark)
 				{
 					spark.emit('ready');
 
-					console.success('API', 'CON', 'Connected', data.id);
+					console.success('API', 'CON', 'Connected', data.id+'::'+data.ip);
 
 					client.write({
 						action: 'add',

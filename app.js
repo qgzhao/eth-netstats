@@ -117,6 +117,7 @@ api.on('connection', function (spark)
 		if( !_.isUndefined(data.id) && !_.isUndefined(data.info) )
 		{
 			data.ip = spark.address.ip;
+			console.info("address-ip:"+data.ip);
 			data.spark = spark.id;
 			data.latency = spark.latency || 0;
 
@@ -258,7 +259,7 @@ api.on('connection', function (spark)
 							data: stats
 						});
 
-						console.success('API', 'STA', 'Stats from:', data.id+"::"+data.ip);
+						console.success('API', 'STA', 'Stats from:', data.id);
 					}
 				}
 			});
